@@ -2,12 +2,14 @@ from django.db import models
 
 class Type(models.Model):
     name = models.CharField(max_length=100)
-
+    slug = models.SlugField(max_length=200, db_index=True, unique=True, blank=True)
 class Category(models.Model):
     name = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=200, db_index=True, unique=True, blank=True)
 
 class SubCategory(models.Model):
     name = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=200, db_index=True, unique=True, blank=True)
 
 class FAQ(models.Model):
     question = models.TextField()
