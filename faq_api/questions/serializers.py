@@ -21,7 +21,7 @@ class SubCategorySerializer(serializers.ModelSerializer):
 class FAQSerializer(serializers.ModelSerializer):
     type = TypeSerializer()
     category = CategorySerializer()
-    sub_category = SubCategorySerializer()
+    subcategory = SubCategorySerializer()
 
     class Meta:
         model = FAQ

@@ -31,6 +31,6 @@ class FAQByTypeAndCategoryView(APIView):
 
 class FAQByTypeAndCategoryAndSubCategoryView(APIView):
     def get(self, request, type_slug, category_slug, subcategory_slug):
-        faqs = FAQ.objects.filter(type__slug=type_slug, category__slug=category_slug, sub_category__slug=subcategory_slug)
+        faqs = FAQ.objects.filter(type__slug=type_slug, category__slug=category_slug, subcategory__slug=subcategory_slug)
         serializer = FAQSerializer(faqs, many=True)
         return Response(serializer.data)

@@ -18,4 +18,4 @@ class FAQ(models.Model):
     answer_image = models.ImageField(upload_to='answers/', null=True, blank=True)
     type = models.ForeignKey(Type, on_delete=models.CASCADE, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
-    sub_category = models.ForeignKey(SubCategory, related_name='faqs', on_delete=models.CASCADE, null=True, blank=True)
+    subcategory = models.ForeignKey(SubCategory, related_name='faqs', on_delete=models.CASCADE, null=True, blank=True)
